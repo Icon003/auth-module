@@ -216,7 +216,7 @@ export default class Oauth2Scheme extends BaseScheme {
         if (this.options.endpoints.logout) {
             const opts = {
                 client_id: this.options.clientId,
-                logout_uri: this._logoutRedirectURI
+                redirect_uri: this._logoutRedirectURI
             };
             const url = this.options.endpoints.logout + '?' + encodeQuery(opts);
             window.location.replace(url);
